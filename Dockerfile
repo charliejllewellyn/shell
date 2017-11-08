@@ -241,5 +241,14 @@ RUN cd /usr/local/bin && \
     unzip packer_${PACKER_VERSION}_linux_amd64.zip && \
     rm packer_${PACKER_VERSION}_linux_amd64.zip
 
+
+RUN apk add --update openssh-client
+
+RUN apk add --update py-pip
+RUN pip install --upgrade setuptools
+RUN pip install ez_setup
+RUN easy_install -U setuptools
+RUN curl -L https://aka.ms/InstallAzureCli | sed  s/XXXX/XXXXXX/g | bash
+
 USER $UNAME
 ENTRYPOINT ["zsh"]
