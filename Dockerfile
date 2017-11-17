@@ -32,6 +32,7 @@ RUN apk add --update --virtual build-deps \
     ncurses-dev \
     python \
     python-dev \
+    gcc \
     && cd /tmp \
     && git  clone https://github.com/vim/vim \
     && cd /tmp/vim \
