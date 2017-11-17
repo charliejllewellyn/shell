@@ -119,6 +119,7 @@ RUN apk --update add \
     llvm \
     perl \
     python-dev \
+    gcc \
     && git clone --depth 1  https://github.com/Valloric/YouCompleteMe \
     $UHOME/bundle/YouCompleteMe/ \
     && cd $UHOME/bundle/YouCompleteMe \
